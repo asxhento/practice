@@ -43,4 +43,5 @@ class studentmngtController extends Controller
         $student->delete();
         return redirect()->route('studentsomething.index')->with('success', 'Student deleted successfully.') ;
     }
+
 }

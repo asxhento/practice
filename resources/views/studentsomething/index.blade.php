@@ -46,11 +46,29 @@
                                         <td>{{ $items->mname }}</td>
                                         <td>{{ $items->add }}</td>
                                         <td>{{ $items->dobirth }}</td>
+                                        <td>  <!-- DELETE BUTTON -->
+        <form action="{{ route('studentsomething.destroy', $items->id) }}" method="POST" style="display:inline;">
+            @csrf
+            @method('DELETE')
+
+            <button type="submit" class="btn btn-danger btn-sm"
+                onclick="return confirm('Are you sure you want to delete this student?')">
+                Delete
+            </button>
+        </form></td>
+        <td> <!-- EDIT BUTTON -->
+    <a href="{{ route('studentsomething.edit', $items->id) }}"
+       class="btn btn-primary btn-sm">
+        Edit
+    </a> </td>
                                     </tr>
+                                    
                                  @endforeach
 
                                 </tbody>
+                               
                             </table>
+                            
                         </div>
                         <!-- /.card-body -->
                     </div>
