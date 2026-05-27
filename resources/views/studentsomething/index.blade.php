@@ -15,6 +15,7 @@
 <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
+            <a href="{{ route('studentsomething.create') }}" class="btn btn-primary mb-3">Add Student</a>
             <div class="row">
                 <div class="col-lg-12">
 
@@ -29,12 +30,24 @@
                                 <thead>
                                 </thead>
                                 <tbody>
-                                 {{-- @foreach($student) --}}
                                     <tr>
-                                        <td>Matthew Bartolomeo</td>
-                                        <td>matthewbartolomeo@sample.com</td>
+                                        <th>ID</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Middle Name</th>
+                                        <th>Address</th>
+                                        <th>Date of Birth</th>
                                     </tr>
-                                {{-- @endforeach --}}
+                                 @foreach($student as $items)
+                                    <tr>
+                                        <td>{{ $items->id }}</td>
+                                        <td>{{ $items->fname }}</td>
+                                        <td>{{ $items->lname }}</td>
+                                        <td>{{ $items->mname }}</td>
+                                        <td>{{ $items->add }}</td>
+                                        <td>{{ $items->dobirth }}</td>
+                                    </tr>
+                                 @endforeach
                                 </tbody>
                             </table>
                         </div>
