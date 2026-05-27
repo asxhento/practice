@@ -38,7 +38,7 @@
 
                                 <div class="form-group col-12">
                                     <label for="midname">Middle Name</label>
-                                    <input type="text" class="form-control g-2" name="midname" id="midname" placeholder="Enter your Middlename" require>
+                                    <input type="text" class="form-control g-2" name="mname" id="mname" placeholder="Enter your Middlename" require>
                                 </div>
                                 @error('mname') <span class="text-danger">{{$message}}</span> @enderror
 
@@ -56,7 +56,7 @@
 
                                 <div class="form-group col-12">
                                     <label for="dob">Date Of Birth</label>
-                                    <input type="date" class="form-control g-2" name="dob" id="dob" placeholder="" require>
+                                    <input type="date" class="form-control g-2" name="dobirth" id="dobirth" placeholder="" require>
                                 </div>
                                 @error('dob') <span class="text-danger">{{$message}}</span> @enderror
 
